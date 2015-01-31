@@ -1,0 +1,26 @@
+Writing PID to tmp/pids/thin.pid
+Exiting!
+/home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/rack/adapter/loader.rb:32:in `read': No such file or directory @ rb_sysopen - config.ru (Errno::ENOENT)
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/rack/adapter/loader.rb:32:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/controllers/controller.rb:72:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/thin:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/thin:23:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/ruby_executable_hooks:15:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/ruby_executable_hooks:15:in `<main>'
+Writing PID to tmp/pids/thin.pid
+Exiting!
+/home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/rack/adapter/loader.rb:32:in `read': No such file or directory @ rb_sysopen - config.ru (Errno::ENOENT)
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/rack/adapter/loader.rb:32:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/controllers/controller.rb:182:in `load_rackup_config'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/controllers/controller.rb:72:in `start'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/runner.rb:200:in `run_command'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/lib/thin/runner.rb:156:in `run!'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/gems/thin-1.6.3/bin/thin:6:in `<top (required)>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/thin:23:in `load'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/thin:23:in `<main>'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/ruby_executable_hooks:15:in `eval'
+	from /home/ubuntu/.rvm/gems/ruby-2.1.5/bin/ruby_executable_hooks:15:in `<main>'
