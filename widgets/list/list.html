@@ -2,14 +2,14 @@
 
 <ol>
   <li data-foreach-item="items">
-    <span class="label" data-bind="item.label"></span>
+  <span class="label" data-bind="item.label" data-bind-data-url="item.link"></span>
     <span class="value" data-bind="item.value"></span>
   </li>
 </ol>
 
 <ul class="list-nostyle">
   <li data-foreach-item="items">
-    <span class="label" data-bind="item.label"></span>
+  <a data-bind-href="item.link"><span class="label" data-bind="item.label"></span></a>
     <span class="value" data-bind="item.value"></span>
   </li>
 </ul>

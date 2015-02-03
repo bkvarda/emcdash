@@ -5,7 +5,6 @@ require 'json'
 require 'date'
 
 @config = JSON.parse(File.read('config/config.json'))
-puts @config
 @username = @config['username']
 @pass = @config['password']
 @domain = @config['domain']
