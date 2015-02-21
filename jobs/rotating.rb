@@ -15,7 +15,6 @@ SCHEDULER.every '1m' do
   sr_url ='http://10.4.44.218:1337/csv/srreport/'+gdun.to_s 
   array_data = Arrays.getArrayData(gdun)
   expiring_data = Arrays.get_expiring_data(array_data)
-  puts expiring_data
   num_expiring = expiring_data.length
   expiring_counts = Arrays.trimArrayCounts(Arrays.get_expired_counts(expiring_data))
   sr_data = Sr.getSRData(gdun)
@@ -30,7 +29,6 @@ SCHEDULER.every '1m' do
    expiring_hash[array[0]] = { label: array[0], value: array[1].to_s }
   end
   test_hash = Hash.new()
-  puts sev1_hash
   sr_counts = Sr.countSRBySev(sr_data)
   sr_array = []
   sr_array.push ['SR Severity', 'Quantity']

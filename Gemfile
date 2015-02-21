@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 gem 'httpi'
 gem 'rubyntlm'
 gem 'dashing'

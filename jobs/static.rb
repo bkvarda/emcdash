@@ -37,6 +37,7 @@ SCHEDULER.every '1m' do
   sr_counts.each do |array|
    sr_array.push [array[0],array[1]]
   end
+
  
   send_event('static_mychart', slices: sr_array)
   send_event('static_total_srs', { value: sr_data["rows"].length(), link: sr_url })

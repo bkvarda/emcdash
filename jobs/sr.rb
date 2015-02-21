@@ -42,7 +42,7 @@ def Sr.sev1_data(sr_data)
  sev1_data['Headers'] = { col1: 'SR Num. ', col2: 'Age', col3: 'Family   ', col4: 'Site Name' }
  data.each do |sr|
   if sr['Sev'] == 'S1'
-   sev1_data[sr['SR #']] = { col1: sr['SR #'] , col2: sr['Age'].to_i , col3: sr['Family'] , col4: sr['CS Customer Name'] }
+   sev1_data[sr['SR_NUMBER']] = { col1: sr['SR_NUMBER'] , col2: sr['Age'].to_i , col3: sr['Family'] , col4: sr['CS Customer Name'] }
   end
  end
  return sev1_data
