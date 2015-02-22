@@ -20,16 +20,18 @@ avoid any internal issues.
 ## Usage
 Once configured run this from inside of the emcdash folder:
 ```dashing start
+```
 
 Or to run in daemon mode:
 ```dashing start -d
+```
 
 Then navigate to this url in your browser for the rotating sample:
 ```http://localhost:3030/msdashtv
-
+```
 Or here for the static sample:
 ```http://localhost:3030/emctv
-
+```
 ## Modifying GDUNs
 
 ##Licensing
