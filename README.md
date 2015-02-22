@@ -19,13 +19,16 @@ avoid any internal issues.
 
 ## Usage
 Once configured run this from inside of the emcdash folder:
-	dashing start
+```dashing start
+
 Or to run in daemon mode:
-	dashing start -d
+```dashing start -d
+
 Then navigate to this url in your browser for the rotating sample:
-	http://localhost:3030/msdashtv
+```http://localhost:3030/msdashtv
+
 Or here for the static sample:
-	http://localhost:3030/emctv
+```http://localhost:3030/emctv
 
 ## Modifying GDUNs
 
@@ -36,3 +39,6 @@ obtain a copy of the License at <http://www.apache.org/licenses/LICENSE-2.0>
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an .AS IS. 
 BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions
 and limitations under the License.
+
+></content>
+</snippet>
