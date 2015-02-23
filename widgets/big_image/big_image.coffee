@@ -80,7 +80,7 @@ class Dashing.BigImage extends Dashing.Widget
         else
             # Need to resize images to preserve aspect ration
             needResize = true
-            $img = $('<img src="' + self.get("image") + '"/>')
+            $img = $('<img src="' + self.get("image") + '" style="width: 100%;"/>')
         $el.append $img
  
         if needResize
