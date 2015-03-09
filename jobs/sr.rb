@@ -4,6 +4,7 @@ require 'httpi'
 require 'json'
 require 'date'
 
+puts "testin commit"
 @json = JSON.parse(File.read('config/config.json'))
 @config = @json['config']
 @username = @config['username'] 
