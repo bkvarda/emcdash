@@ -5,8 +5,6 @@ require_relative 'gdun'
 puts 'job started'
 gdun_data = Gdun.static_gdun
 
-puts 'static job gdun is '+gdun_data[0]
-puts 'static job gdun name '+gdun_data[1]
 SCHEDULER.every '1m' do
   puts 'The Scheduler just ran'
   gdun = gdun_data[0]

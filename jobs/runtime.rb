@@ -1,15 +1,41 @@
-require_relative 'arrays'
-require_relative 'sr'
 require_relative 'gdun'
+require 'json'
 
-puts 'job started'
 
+config = JSON.parse(File.read('config/config.json'))
+display = config["display"]
+mode = config["mode"]
+
+puts "EMCDash running in "+mode+" mode with "+display+" display"
+
+if mode == "SAM"
+SCHEDULER.every '10s' do
+puts "The mode was SAM"
+puts config["sam_accounts"].sample
+end
+
+elsif mode =="DSM"
+SCHEDULER.every '10s' do
+puts "The mode was DSM"
+end
+
+elsif mode =="SE"
+SCHEDULER.every '10s' do
+puts "The mode was SE"
+end
+
+elsif mode =="Area"
+SCHEDULER.every '10s' do
+puts "The mode was Area"
+end
+
+else
 SCHEDULER.every '1m' do
   puts 'The Scheduler just ran'
   gdun_data = Gdun.random_gdun
-  gdun = gdun_data[0]
-  cust_name = gdun_data[1]
-  cust_logo = gdun_data[2]
+  gdun = gdun_data["gdun"]
+  cust_name = gdun_data["acct"]
+  cust_logo = gdun_data["image"]
   installs_url = 'http://10.4.44.218:1337/csv/installreport/'+gdun.to_s
   sev1_url ='http://10.4.44.218:1337/csv/sev1report/'+gdun.to_s
   sr_url ='http://10.4.44.218:1337/csv/srreport/'+gdun.to_s 
@@ -45,3 +71,6 @@ SCHEDULER.every '1m' do
   send_event('num_expiring', value: num_expiring)
   send_event('expiring_counts', { items: expiring_hash.values })
  end
+
+end
+

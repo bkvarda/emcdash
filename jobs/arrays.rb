@@ -4,16 +4,17 @@ require 'httpi'
 require 'json'
 require 'date'
 
-@config = JSON.parse(File.read('config/config.json'))
+@json = JSON.parse(File.read('config/config.json'))
+@config = @json['config']
 @username = @config['username']
 @pass = @config['password']
 @domain = @config['domain']
 @url1 = @config['iburl']
 @url2 = @config['iburl2']
 
-
 def Arrays.getArrayData (gdun)
  url = @url1+gdun+@url2
+ puts url
  request = HTTPI::Request.new
  request.url = url
  request.auth.ntlm(@username,@pass,@domain)

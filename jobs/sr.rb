@@ -4,7 +4,8 @@ require 'httpi'
 require 'json'
 require 'date'
 
-@config = JSON.parse(File.read('config/config.json'))
+@json = JSON.parse(File.read('config/config.json'))
+@config = @json['config']
 @username = @config['username'] 
 @pass = @config['password']
 @domain = @config['domain']
