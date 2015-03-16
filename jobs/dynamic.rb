@@ -1,41 +1,8 @@
 require_relative 'gdun'
-require_relative 'dynamic'
 require 'json'
+  
+def dynamic_job
 
-
-config = JSON.parse(File.read('config/config.json'))
-display = config["display"]
-mode = config["mode"]
-accounts = config["accounts"]
-sam_accounts = config["sam_accounts"]
-
-puts "EMCDash running in "+mode+" mode with "+display+" display"
-
-if mode == "SAM"
-SCHEDULER.every '10s' do
-puts "The mode was SAM"
-puts sam_accounts.sample
-puts accounts.sample
-end
-
-elsif mode =="DSM"
-SCHEDULER.every '10s' do
-puts "The mode was DSM"
-end
-
-elsif mode =="SE"
-SCHEDULER.every '10s' do
-puts "The mode was SE"
-end
-
-elsif mode =="Area"
-SCHEDULER.every '10s' do
-puts "The mode was Area"
-end
-
-else
-SCHEDULER.every '1m' do
-  puts 'The Scheduler just ran'
   gdun_data = Gdun.random_gdun
   gdun = gdun_data["gdun"]
   cust_name = gdun_data["acct"]
@@ -76,5 +43,4 @@ SCHEDULER.every '1m' do
   send_event('expiring_counts', { items: expiring_hash.values })
  end
 
-end
 
